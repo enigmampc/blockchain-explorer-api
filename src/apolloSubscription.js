@@ -34,11 +34,6 @@ function initApolloSubscription() {
     })
     .subscribe({
       next: async ({ data: { epoches } }) => {
-        epoches &&
-          epoches.map(({ id }) => {
-            console.log('========= epoches over here', id)
-          })
-
         if (epoches) {
           for (let epochIndex = 0; epochIndex < epoches.length; epochIndex++) {
             const epoch = epoches[epochIndex]
